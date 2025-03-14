@@ -4,7 +4,11 @@ function Home() {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-4">
-            <img src="/profile_photo.jpg" alt="Profile" className="profile-image" />
+            <img 
+              src="/profile_photo.jpg" 
+              alt="Profile" 
+              className="profile-image" 
+            />
           </div>
           <div className="col-md-8">
             <h1>Welcome to My Portfolio</h1>

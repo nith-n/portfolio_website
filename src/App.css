@@ -83,7 +83,7 @@ main {
 
 .home-container {
   min-height: 100vh;
-  background-image: url('public/dji_0313-2048x1152.jpg');
+  background-image: url('/dji_0313-2048x1152.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
