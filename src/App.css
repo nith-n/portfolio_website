@@ -1,0 +1,293 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.black-background {
+  background-color: black;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar * {
+  color: white !important;
+}
+
+.home-container {
+  min-height: 100vh;
+  background-image: url('public/dji_0313-2048x1152.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-top: 120px;
+  position: relative;
+}
+
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 0;
+}
+
+.home-container * {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: bold;
+  font-size: 1.25rem !important;  
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem !important;  
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.footer {
+  padding: 2rem 0;
+  color: white;
+  margin-top: auto;
+  text-align: left;
+}
+
+.footer .container {
+  padding-left: 0rem;
+}
+
+.footer-heading {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.footer p {
+  color: white;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.copyright {
+  color: white;
+  margin-top: 1rem;
+  margin-left: 30rem;
+  text-align: right;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 0;  /* Changed from 50% to 0 */
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.lead {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.home-container h1 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.about-container {
+  min-height: 100vh;
+  background-image: url('/christopher-burns-Kj2SaNHG-hg-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding-top: 120px;
+  position: relative;
+}
+
+.about-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  text-align: left;
+}
+
+.about-container h1 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.about-container h2 {
+  color: #fff;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.about-container h3 {
+  color: #fff;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+
+.job, .certification {
+  margin-bottom: 2rem;
+}
+
+.job p, .certification p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.projects-container {
+  min-height: 100vh;
+  background-image: url('/public_images_1603252501609-Data+Analyst+and+Scientist+Job+Descriptions,+Skills,+and+Qualifications.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding-top: 120px;
+  position: relative;
+}
+
+.projects-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.project {
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.project h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-date {
+  color: #cccccc;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.project-details {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.project-details li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
