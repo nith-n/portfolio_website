@@ -70,15 +70,11 @@ main {
   height: 120px;
   display: flex;
   align-items: center;
-  background: rgba(0, 0, 0, 1);
+  background: var(--navbar-bg) !important;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-}
-
-.navbar * {
-  color: white !important;
 }
 
 .home-container {
@@ -103,7 +99,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7); 
+  background-color: var(--overlay-color); 
   z-index: 0;
 }
 
@@ -113,7 +109,7 @@ main {
 }
 
 .nav-link {
-  color: white !important;
+  color: var(--text-color) !important;
   font-weight: bold;
   font-size: 1.25rem !important;  
   transition: color 0.3s ease;
@@ -129,6 +125,7 @@ main {
   color: white;
   margin-top: auto;
   text-align: left;
+  background: var(--footer-bg) !important;
 }
 
 .footer .container {
@@ -136,20 +133,20 @@ main {
 }
 
 .footer-heading {
-  color: white;
+  color: var(--text-color) !important;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   text-align: left;
 }
 
 .footer p {
-  color: white;
+  color: var(--text-color) !important;
   margin-bottom: 0.5rem;
   text-align: left;
 }
 
 .copyright {
-  color: white;
+  color: var(--text-color) !important;
   margin-top: 1rem;
   margin-left: 30rem;
   text-align: right;
@@ -200,7 +197,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--overlay-color);
   z-index: 0;
 }
 
@@ -248,7 +245,6 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: white;
   padding-top: 120px;
   position: relative;
 }
@@ -260,7 +256,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--overlay-color);
   z-index: 0;
 }
 
@@ -271,13 +267,13 @@ section {
 }
 
 .project h2 {
-  color: white;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
+  color: var(--text-color);
 }
 
 .project-date {
-  color: #cccccc;
+  color: var(--secondary-text);
   font-style: italic;
   margin-bottom: 1rem;
 }
@@ -285,9 +281,174 @@ section {
 .project-details {
   list-style-type: disc;
   padding-left: 1.5rem;
+  color: var(--text-color);
 }
 
 .project-details li {
   margin-bottom: 0.75rem;
   line-height: 1.6;
+  color: var(--text-color);
 }
+
+.projects-container h1 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  position: relative;
+  z-index: 1;
+}
+
+.light-theme {
+  --bg-color: #ffffff;
+  --text-color: #000000;  
+  --secondary-text: #666666;
+  --navbar-bg: #f8f9fa;
+  --footer-bg: #f8f9fa;
+  --overlay-color: rgba(255, 255, 255, 0.9);
+  --skill-bg: #f8f9fa;  
+  --skill-text-color: #000000;
+}
+
+.light-theme p,
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+light-theme h4,
+light-theme h5,
+light-theme h6,
+light-theme span,
+light-theme div {
+  color: var(--text-color);
+}
+
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --secondary-text: #cccccc;
+  --navbar-bg: #000000; /* Changed from #1f1f1f to pure black */
+  --footer-bg: #000000; /* Changed from #1f1f1f to pure black */
+  --overlay-color: rgba(0, 0, 0, 0.8);
+  --skill-bg: #2d2d2d;
+  --skill-text-color: #ffffff;
+}
+
+/* Update theme toggle button styles */
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--text-color) !important;
+  color: var(--text-color) !important;
+  padding: 0.375rem 1rem;  /* Reduced padding to match nav items */
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0;  /* Remove vertical margin */
+  transition: all 0.3s ease;
+  line-height: 1.5;  /* Match nav-link line height */
+  height: auto;  /* Let height be determined by content */
+  display: inline-flex;  /* Better alignment */
+  align-items: center;
+}
+
+/* Add these rules to prevent hover color changes */
+.theme-toggle:hover,
+.theme-toggle:focus,
+.theme-toggle:active {
+  color: var(--text-color) !important;
+  border-color: var(--text-color) !important;
+  opacity: 1 !important;
+}
+
+.skills-section {
+  margin-top: 2rem;
+}
+
+.skills-section input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.skills-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-section li {
+  background: var(--skill-bg);
+  color: var(--skill-text-color);
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 4px;
+  max-width: 400px;
+}
+
+.weather-info {
+  position: absolute;
+  top: 130px;
+  right: 20px;
+  background: var(--bg-color);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* Keeps it above other elements */
+  max-width: 250px;
+  text-align: left;
+  pointer-events: none; /* Prevents interaction */
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(var(--text-color), 0.1);
+}
+
+.weather-info h3 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.weather-info p {
+  color: var(--text-color);
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: var(--navbar-bg);
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .theme-toggle {
+    margin: 0.5rem 0;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+  }
+}
+

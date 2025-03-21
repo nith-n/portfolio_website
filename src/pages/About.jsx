@@ -1,4 +1,26 @@
+import { useState } from 'react';
+
 function About() {
+  const [filter, setFilter] = useState('');
+  const skills = [
+    'JavaScript',
+    'React',
+    'Node.js',
+    'Python',
+    'Data Analysis',
+    'Machine Learning',
+    'SQL',
+    'NoSQL',
+    'HTML',
+    'CSS',
+    'Git',
+    'Docker'
+  ];
+
+  const filteredSkills = skills.filter(skill =>
+    skill.toLowerCase().includes(filter.toLowerCase())
+  );
+
   return (
     <div className="about-container">
       <div className="container content-wrapper">
@@ -40,6 +62,21 @@ function About() {
             <h3>PCEP - Certified Entry-Level Python Programmer</h3>
             <p>Issued - October 2021</p>
           </div>
+        </section>
+
+        <section className="skills-section">
+          <h2>Skills</h2>
+          <input
+            type="text"
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            placeholder="Filter skills"
+          />
+          <ul>
+            {filteredSkills.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul>
         </section>
       </div>
     </div>
